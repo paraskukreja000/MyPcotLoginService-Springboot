@@ -2,11 +2,11 @@
 The system works like a UPI system for online payments where the same email address can be used for multiple accounts.
 
 # Features ->
-  -It allows users to register and log in using their email address and password.
-  -A user can add a bank account once they have logged in.
-  -Users can view all bank accounts linked to their email addresses.
-  -Money can be deposited and withdrawn using their account number.
-  -A user can also delete their bank account to remove it.
+  - It allows users to register and log in using their email address and password.
+  - A user can add a bank account once they have logged in.
+  - Users can view all bank accounts linked to their email addresses.
+  - Money can be deposited and withdrawn using their account number.
+  - A user can also delete their bank account to remove it.
 
 # Payloads ->
   * Register ->
