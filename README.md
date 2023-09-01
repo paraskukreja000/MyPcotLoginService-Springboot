@@ -10,8 +10,8 @@ The system works like a UPI system for online payments where the same email addr
 
 # Payloads ->
   * Register ->
-      url -> "/register"
-      body -> { "email":"abc@g.com", "password":"abc", "name":"test", "gender":"Male"}
+      - url -> "/register"
+      - body -> { "email":"abc@g.com", "password":"abc", "name":"test", "gender":"Male"}
   * Login ->
       url -> "/login"
       body -> {"email":"abc@g.com", "password":"abc" }
