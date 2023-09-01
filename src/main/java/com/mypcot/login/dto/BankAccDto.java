@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class BankAccDto {
 	long accno;
 	String name;
-	int bal;
+	int amount;
 	String email;
 }

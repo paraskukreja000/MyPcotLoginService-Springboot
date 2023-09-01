@@ -24,8 +24,8 @@ public class BankAccController {
 	private BankAccService bs;
 	
 	@PostMapping("/allAccounts")
-	public ResponseEntity<List<String>> getAllAccByEmail(@RequestBody String email){
-		List<String> acc = bs.getAllAccountByEmail(email);
+	public ResponseEntity<List<Accounts>> getAllAccByEmail(@RequestBody String email){
+		List<Accounts> acc = bs.getAllAccountByEmail(email);
 		return ResponseEntity.of(Optional.of(acc));
 	}
 	

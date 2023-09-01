@@ -18,7 +18,7 @@ public class Accounts {
 	@Id
 	long accno;
 	String name;
-	int bal;
+	int balance;
 	String email;
 	
 }

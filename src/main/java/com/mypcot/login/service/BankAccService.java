@@ -31,8 +31,8 @@ public class BankAccService implements CommandLineRunner{
 
 	
 
-	public List<String> getAllAccountByEmail(String email) {
-		List<String> acc = ar.findAllAccountByEmail(email);
+	public List<Accounts> getAllAccountByEmail(String email) {
+		List<Accounts> acc = ar.findAccountByEmail(email);
 		return acc;
 	}
 	
@@ -43,12 +43,7 @@ public class BankAccService implements CommandLineRunner{
 
 	
 	public Accounts addAccount(Accounts account) {
-		Random random = new Random();
-        // Generate a random 12-digit number
-        long randomNumber = (long) (random.nextDouble() * 900_000_000_000L) + 100_000_000_000L;
-
-		if(account.getEmail() != null && account.getName() != null) {
-			account.setAccno(randomNumber);
+		if(account.getEmail() != null && account.getName() != null) {;
 			ar.save(account);			
 		}
 		return account;
@@ -72,19 +67,19 @@ public class BankAccService implements CommandLineRunner{
 	
 	public String depositAmount(BankAccDto account) {		
 		Accounts ac = ar.findOneByEmailAndAccno(account.getEmail(),account.getAccno());
-		ac.setBal(ac.getBal() + account.getBal());
+		ac.setBalance(ac.getBalance() + account.getAmount());
 		ar.save(ac);
-		return "your new balance is: "+(ac.getBal() + account.getBal());
+		return "your new balance is: "+(ac.getBalance() + account.getAmount());
 	}
 
 	
 	public String withdrawAmount(BankAccDto account) {
 		Accounts ac = ar.findOneByEmailAndAccno(account.getEmail(),account.getAccno());
-		if(ac.getBal()>=account.getBal()) {
-			ac.setBal(ac.getBal() - account.getBal());
+		if(ac.getBalance()>=account.getAmount()) {
+			ac.setBalance(ac.getBalance() - account.getAmount());
 		}
 		ar.save(ac);
-		return "your new balance is: "+(ac.getBal() - account.getBal());
+		return "your new balance is: "+(ac.getBalance() - account.getAmount());
 	}
 
 
