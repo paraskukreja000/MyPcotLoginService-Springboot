@@ -13,31 +13,31 @@ The system works like a UPI system for online payments where the same email addr
       - url -> "/register"
       - body -> { "email":"abc@g.com", "password":"abc", "name":"test", "gender":"Male"}
   * Login ->
-      url -> "/login"
-      body -> {"email":"abc@g.com", "password":"abc" }
+      - url -> "/login"
+      - body -> {"email":"abc@g.com", "password":"abc" }
 
   * To get all account link to a email ->
-      url -> "/allAccounts"
-      body -> {"email":"abc@g.com"}
+      - url -> "/allAccounts"
+      - body -> {"email":"abc@g.com"}
       
   * To get details of a account by account number ->
-      url -> "/accountByAccno"
-      body ->{"email":"abc@g.com", "accno":123}
+      - url -> "/accountByAccno"
+      - body ->{"email":"abc@g.com", "accno":123}
       
   * To add a bank account ->
-      url -> "/addAcc"
-      body -> {"email":"abc@g.com", "accno":123, "name":"TestName", "balance":1200}
+      - url -> "/addAcc"
+      - body -> {"email":"abc@g.com", "accno":123, "name":"TestName", "balance":1200}
 
   * To deposit and withdraw money by account number->
-      url -> 
+      - url -> 
             deposit -> "/deposit"
             withdraw -> "/withdraw"
-      body -> {"email":"abc@g.com", "accno":123, "currency":1234}
+      - body -> {"email":"abc@g.com", "accno":123, "currency":1234}
 
   * To update name in a bank account ->
-      url -> "/updateName"
-      body -> {"email":"abc@g.com", "accno":123, "name":"TestName"}
+      - url -> "/updateName"
+      - body -> {"email":"abc@g.com", "accno":123, "name":"TestName"}
 
   * To remove a bank account ->
-      url -> "/delete/{accno}"
-      param -> /123
+      - url -> "/delete/{accno}"
+      - param -> /123
